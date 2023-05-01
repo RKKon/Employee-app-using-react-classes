@@ -9,7 +9,8 @@ const EmployeesListItem = (props) => { /* = ({name, salary, promotion}) => */
 
   return (//либо внути <li> {`list-group-item d-flex justify-content-between ${promotion ? 'increase' : ''}`}
     <li className={classNames} >
-      <span className="list-group-item-label" onClick={onToggleLike}>{name}</span>
+      <span className="list-group-item-label" onClick={onToggleLike} 
+      style={{fontSize: '1.5em', color: '#212529'}}>{name}</span>
       <input type="text" className="list-group-item-input" defaultValue={salary + '$'}/>
       <div className='d-flex justify-content-center align-items-center'>
         <button type="button"

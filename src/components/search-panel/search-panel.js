@@ -10,7 +10,7 @@ class SearchPanel extends Component {
   }
 
   onUpdateSearch = (e) => { // it Local function
-    const term = e.target.value;
+    const term = e.target.value.toLowerCase();
     this.setState({term})
     this.props.onUpdateSearch(term) // it comes from App
   }

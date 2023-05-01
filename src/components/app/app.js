@@ -20,6 +20,7 @@ class App extends Component {
       filter: 'all'
     }
     this.maxId = 4;
+    
   }  
 
   deleteItem = (id) => { 
@@ -73,15 +74,15 @@ class App extends Component {
     }))
   }
 
-  searchEmployees = (items, term) => {
+  searchEmployees = (items, term) => { // выполняет действия по пойску
     if (term.length === 0) { 
       return items;
     }
-    return items.filter(item => { return item.name.indexOf(term) > -1 }) 
+    return items.filter(item => { return item.name.toLowerCase().indexOf(term) > -1 }) 
   }
-  onUpdateSearch = (term) => {this.setState({term})};
+  onUpdateSearch = (term) => {this.setState({term})}; // вносить данные в term (как итог работы searchEmployees)
 
-  filterSalary = (items, filter) => {
+  filterSalary = (items, filter) => { // выполняет действия по фильту на основе кнопок
     switch (filter) {
       case 'like':
         return items.filter(item => item.like);
@@ -91,13 +92,13 @@ class App extends Component {
         return items
     }
   }
-  onFilterSelect = (filter) => {this.setState({filter})}
+  onFilterSelect = (filter) => {this.setState({filter})} // вносить данные в filter (как итог работы filterSalary)
 
   render() {
     const {data, term, filter} = this.state;
     const employees = this.state.data.length;
     const promotioned = this.state.data.filter(item => item.promotion).length;
-    const visibleData = this.filterSalary(this.searchEmployees(data, term), filter)
+    const visibleData = this.filterSalary(this.searchEmployees(data, term), filter)//1)() это data после поиска а второй это фильтр. если просто поиск то фильт не сработает
 
     return (
       <div className="app">
@@ -107,12 +108,12 @@ class App extends Component {
         <SearchPanel onUpdateSearch={this.onUpdateSearch}></SearchPanel>
         <AppFilter filter={filter} onFilterSelect={this.onFilterSelect}></AppFilter>
       </div>
+
       <EmployeesList data={visibleData} onDelete={this.deleteItem}
       onTogglePromotion={this.onTogglePromotion} onToggleLike={this.onToggleLike}></EmployeesList> 
       <EmployeesAddForm onAddEmployee={this.addEmployee}></EmployeesAddForm>
-
       </div>
-  )
+    )
   }
 }
 
