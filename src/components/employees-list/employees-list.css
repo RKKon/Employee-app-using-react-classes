@@ -5,3 +5,10 @@
     box-shadow: 15px 15px 39px rgba(0,0,0, .15);
     color: #fff;
 }
+.list_not_found {
+    background-color: #fff;
+    text-align: center;
+    color: black;
+    margin-bottom: 0;
+    border-radius: 3px;
+}

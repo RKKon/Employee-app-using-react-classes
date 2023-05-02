@@ -10,13 +10,13 @@ const EmployeesList = ({data, onDelete, onTogglePromotion, onToggleLike}) => {
       <EmployeesListItem key={id} {...itemProps} 
       onDelete={() => onDelete(id)}
       onTogglePromotion={() => onTogglePromotion(id)}
-      onToggleLike={() => onToggleLike(id)}></EmployeesListItem>         
+      onToggleLike={() => onToggleLike(id)}/>       
     )
   })
 
   return (
     <ul className="app-list list-group">
-      {elements}
+      {elements && elements.length ? elements : <h2 className='list_not_found'> Employees not found.</h2>}
     </ul>
   )
 }

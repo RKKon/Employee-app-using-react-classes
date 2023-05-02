@@ -1,11 +1,20 @@
 import { Component } from 'react';
-import AppInfo from '../app-info/app-info';
-import SearchPanel from '../search-panel/search-panel';
-import AppFilter from '../app-filter/app-filter';
-import EmployeesList from '../employees-list/employees-list';
-import EmployeesAddForm from '../employees-add-form/employees-add-form';
+import { Suspense, lazy } from 'react';
+
+import Spinner from '../spinner/Spinner';
 
 import './app.css'
+
+const AppInfo = lazy(() => import('../app-info/app-info'));
+const SearchPanel = lazy(() => import('../search-panel/search-panel'));
+const AppFilter = lazy(() => import('../app-filter/app-filter'));
+const EmployeesList = lazy(() => import('../employees-list/employees-list'));
+const EmployeesAddForm = lazy(() => import('../employees-add-form/employees-add-form'));
+//import AppInfo from '../app-info/app-info';
+//import SearchPanel from '../search-panel/search-panel';
+//import AppFilter from '../app-filter/app-filter';
+//import EmployeesList from '../employees-list/employees-list';
+//import EmployeesAddForm from '../employees-add-form/employees-add-form';
 
 class App extends Component {
   constructor(props) {
@@ -101,18 +110,20 @@ class App extends Component {
     const visibleData = this.filterSalary(this.searchEmployees(data, term), filter)//1)() это data после поиска а второй это фильтр. если просто поиск то фильт не сработает
 
     return (
-      <div className="app">
-      <AppInfo employees={employees} promotioned={promotioned}></AppInfo>
+      <main className="app">
+        <Suspense fallback={<Spinner/>}>
+          <AppInfo employees={employees} promotioned={promotioned}/>
 
-      <div className="search-panel">
-        <SearchPanel onUpdateSearch={this.onUpdateSearch}></SearchPanel>
-        <AppFilter filter={filter} onFilterSelect={this.onFilterSelect}></AppFilter>
-      </div>
+          <div className="search-panel">
+            <SearchPanel onUpdateSearch={this.onUpdateSearch}/>
+            <AppFilter filter={filter} onFilterSelect={this.onFilterSelect}/>
+          </div>
 
-      <EmployeesList data={visibleData} onDelete={this.deleteItem}
-      onTogglePromotion={this.onTogglePromotion} onToggleLike={this.onToggleLike}></EmployeesList> 
-      <EmployeesAddForm onAddEmployee={this.addEmployee}></EmployeesAddForm>
-      </div>
+          <EmployeesList data={visibleData} onDelete={this.deleteItem}
+            onTogglePromotion={this.onTogglePromotion} onToggleLike={this.onToggleLike}/>
+          <EmployeesAddForm onAddEmployee={this.addEmployee}/>
+        </Suspense>
+      </main>
     )
   }
 }
