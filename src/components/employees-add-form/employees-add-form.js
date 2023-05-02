@@ -22,8 +22,29 @@ class EmployeesAddForm extends Component {
         name: '',
         salary: ''
       })
+      this.validationForm() // clear Form from errors borders
+    } else {
+      this.validationForm()
+    } 
+  }
+
+  validationForm = () => {
+    const inputs = document.querySelector('.add-form');
+    if (this.state.name.length > 2 && this.state.salary > 0) { // clear Form
+      inputs[0].style.border = '';
+      inputs[1].style.border = '';
+    } else if (this.state.name.length < 2 && this.state.salary <= 0) { 
+      inputs[0].style.border = '3.1px solid #e03737c7';
+      inputs[1].style.border = '3.1px solid #e03737c7';
+    } else if (this.state.name.length < 2) {
+      inputs[0].style.border = '3.1px solid #e03737c7';
+      inputs[1].style.border = '';
+    } else if (this.state.salary <= 0) {
+      inputs[1].style.border = '3.1px solid #e03737c7';
+      inputs[0].style.border = '';
     }
   }
+
     
   render() {
     const {name, salary} = this.state;
@@ -37,7 +58,7 @@ class EmployeesAddForm extends Component {
                 className="form-control new-post-label"
                 placeholder="What's his name?"
                 name="name"
-                value={name} // необходимо value для тго чтобы был управляемоый элемент и правильного используемого input and form
+                value={name} // необходимо value для того чтобы был управляемоый элемент и правильного используемого input and form
                 onChange={this.onChangeInput} />
             <input type="number"
                 className="form-control new-post-label"
@@ -46,8 +67,7 @@ class EmployeesAddForm extends Component {
                 value={salary}
                 onChange={this.onChangeInput} />
   
-            <button type="submit"
-                    className="btn btn-outline-light">Add</button>
+            <button type="submit" className="btn btn-outline-light">Add</button>
         </form>
       </div>  
     )
