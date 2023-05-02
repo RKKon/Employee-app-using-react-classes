@@ -1,13 +1,33 @@
 {
   "files": {
-    "main.css": "/Employee-app-using-react-classes/static/css/main.3a3af0fb.css",
-    "main.js": "/Employee-app-using-react-classes/static/js/main.cbf59c59.js",
+    "main.css": "/Employee-app-using-react-classes/static/css/main.1e6a8552.css",
+    "main.js": "/Employee-app-using-react-classes/static/js/main.41dac626.js",
+    "static/css/731.acaec7be.chunk.css": "/Employee-app-using-react-classes/static/css/731.acaec7be.chunk.css",
+    "static/js/731.0f085361.chunk.js": "/Employee-app-using-react-classes/static/js/731.0f085361.chunk.js",
+    "static/css/325.5c9f3281.chunk.css": "/Employee-app-using-react-classes/static/css/325.5c9f3281.chunk.css",
+    "static/js/325.d49f7229.chunk.js": "/Employee-app-using-react-classes/static/js/325.d49f7229.chunk.js",
+    "static/css/640.2ac580e1.chunk.css": "/Employee-app-using-react-classes/static/css/640.2ac580e1.chunk.css",
+    "static/js/640.30abd99e.chunk.js": "/Employee-app-using-react-classes/static/js/640.30abd99e.chunk.js",
+    "static/css/269.d775b59e.chunk.css": "/Employee-app-using-react-classes/static/css/269.d775b59e.chunk.css",
+    "static/js/269.ea3807e3.chunk.js": "/Employee-app-using-react-classes/static/js/269.ea3807e3.chunk.js",
+    "static/css/613.05098b73.chunk.css": "/Employee-app-using-react-classes/static/css/613.05098b73.chunk.css",
+    "static/js/613.253eb190.chunk.js": "/Employee-app-using-react-classes/static/js/613.253eb190.chunk.js",
     "index.html": "/Employee-app-using-react-classes/index.html",
-    "main.3a3af0fb.css.map": "/Employee-app-using-react-classes/static/css/main.3a3af0fb.css.map",
-    "main.cbf59c59.js.map": "/Employee-app-using-react-classes/static/js/main.cbf59c59.js.map"
+    "main.1e6a8552.css.map": "/Employee-app-using-react-classes/static/css/main.1e6a8552.css.map",
+    "main.41dac626.js.map": "/Employee-app-using-react-classes/static/js/main.41dac626.js.map",
+    "731.acaec7be.chunk.css.map": "/Employee-app-using-react-classes/static/css/731.acaec7be.chunk.css.map",
+    "731.0f085361.chunk.js.map": "/Employee-app-using-react-classes/static/js/731.0f085361.chunk.js.map",
+    "325.5c9f3281.chunk.css.map": "/Employee-app-using-react-classes/static/css/325.5c9f3281.chunk.css.map",
+    "325.d49f7229.chunk.js.map": "/Employee-app-using-react-classes/static/js/325.d49f7229.chunk.js.map",
+    "640.2ac580e1.chunk.css.map": "/Employee-app-using-react-classes/static/css/640.2ac580e1.chunk.css.map",
+    "640.30abd99e.chunk.js.map": "/Employee-app-using-react-classes/static/js/640.30abd99e.chunk.js.map",
+    "269.d775b59e.chunk.css.map": "/Employee-app-using-react-classes/static/css/269.d775b59e.chunk.css.map",
+    "269.ea3807e3.chunk.js.map": "/Employee-app-using-react-classes/static/js/269.ea3807e3.chunk.js.map",
+    "613.05098b73.chunk.css.map": "/Employee-app-using-react-classes/static/css/613.05098b73.chunk.css.map",
+    "613.253eb190.chunk.js.map": "/Employee-app-using-react-classes/static/js/613.253eb190.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a3af0fb.css",
-    "static/js/main.cbf59c59.js"
+    "static/css/main.1e6a8552.css",
+    "static/js/main.41dac626.js"
   ]
 }

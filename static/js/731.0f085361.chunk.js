@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkemployees=self.webpackChunkemployees||[]).push([[731],{731:function(e,n,s){s.r(n),s.d(n,{default:function(){return r}});var o=s(184),r=function(e){var n=e.employees,s=e.promotioned;return(0,o.jsxs)("div",{className:"app-info",children:[(0,o.jsx)("h1",{children:"Accounting for employees in company N"}),(0,o.jsxs)("h2",{children:["Total number of employees: ",n]}),(0,o.jsxs)("h2",{children:["Award will be received by: ",s]})]})}}}]);
+//# sourceMappingURL=731.0f085361.chunk.js.map
